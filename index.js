@@ -18,7 +18,8 @@
    })
    
    app.get('/detail/:id', (req, res) => {
-    console.log(req.params.id)
+    const id = req.params.id;
+   
    })
 
    app.listen(prot, () => {
