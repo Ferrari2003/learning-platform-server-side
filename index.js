@@ -19,7 +19,8 @@
    
    app.get('/detail/:id', (req, res) => {
     const id = req.params.id;
-   
+   const selectedDetail = detail.find(d => d._id === id);
+   res.send(selectedDetail);
    })
 
    app.listen(prot, () => {
