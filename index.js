@@ -16,6 +16,18 @@
    app.get('/programming-data', (req, res) => {
        res.send(programming);
    })
+
+   app.get('/category/:id', (req, res) => {
+    const id = req.params.id;
+    if(id === '08') {
+        res.send(detail)
+    }
+    else{
+        const category_news = detail.filter(d => d.category_id === id);
+        res.send(category_news)
+    }
+   
+   })
    
    app.get('/detail/:id', (req, res) => {
     const id = req.params.id;
