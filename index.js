@@ -7,7 +7,7 @@
    app.use(cors());
 
    const programming = require('./data/programming.json');
-   
+   const detail = require('./data/details.json');
    
    app.get('/', (req, res) => {
        res.send('Details API Running')
@@ -17,7 +17,9 @@
        res.send(programming);
    })
    
-   
+   app.get('/detail/:id', (req, res) => {
+    console.log(req.params.id)
+   })
 
    app.listen(prot, () => {
        console.log('Programming data server running on port', prot);
