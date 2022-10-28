@@ -6,14 +6,14 @@
   app.use(cors())
 
 
-   const categories = require('./data/course.json')
+   const detail = require('./data/course.json')
 
    app.get('/', (req, res) => {
        res.send('Details API Running')
    });
    
-   app.get('/details-categories', (req, res) => {
-    res.send(categories)
+   app.get('/details_data', (req, res) => {
+     res.send(detail)
    })
 
    app.listen(prot, () => {
